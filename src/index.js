@@ -5,6 +5,7 @@ import path from "path";
 import './database';
 import productoRouter from './routes/productos.routes';
 import usuarioRouter from './routes/usuarios.routes';
+import loginRouter from './routes/login.routes'
 
 // crear una instancia de express
 const app = express();
@@ -32,3 +33,4 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.use('/apicafe', productoRouter);
 app.use('/apicafe', usuarioRouter);
+app.use('/apicafe', loginRouter);
