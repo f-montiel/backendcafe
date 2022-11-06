@@ -2,8 +2,9 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import path from "path";
-import './database'
-import productoRouter from './routes/productos.routes'
+import './database';
+import productoRouter from './routes/productos.routes';
+import usuarioRouter from './routes/usuarios.routes';
 
 // crear una instancia de express
 const app = express();
@@ -30,3 +31,4 @@ app.use(express.static(path.join(__dirname, "../public")));
 // Rutas
 
 app.use('/apicafe', productoRouter);
+app.use('/apicafe', usuarioRouter);
